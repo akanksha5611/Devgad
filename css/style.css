@@ -66,6 +66,7 @@
 }
  h3 {
      font-size: 18px 
+
 }
  h4 {
      font-size: 16px 
@@ -835,6 +836,9 @@
      -webkit-backface-visibility: hidden;
      backface-visibility: hidden;
 }
+ #man{
+     height: 500px;
+ }
  .shop-cat-box:hover img{
      opacity: 0.6;
      -webkit-transform: translate3d(0,0,0);
