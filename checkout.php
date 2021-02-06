@@ -2,6 +2,12 @@
 <html lang="en">
 <!-- Basic -->
 
+<?php 
+session_start();
+require 'connection.php';
+$conn = Connect();
+?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>Devgad</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -112,8 +118,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
-                </div>
+                <a class="navbar-brand" href="index.html"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -127,7 +132,7 @@
 								<li><a href="shop.html">Sidebar Shop</a></li>
 								<li><a href="shop-detail.html">Shop Detail</a></li>
                                 <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="checkout.php">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
                                 <li><a href="wishlist.html">Wishlist</a></li>
                             </ul>
@@ -221,7 +226,7 @@
                         <h3>Account Login</h3>
                     </div>
                     <h5><a data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Click here to Login</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formLogin">
+                    <form class="mt-3 collapse review-form-box" id="formLogin" action="login.php">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="InputEmail" class="mb-0">Email Address</label>
@@ -238,7 +243,7 @@
                         <h3>Create New Account</h3>
                     </div>
                     <h5><a data-toggle="collapse" href="#formRegister" role="button" aria-expanded="false">Click here to Register</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formRegister">
+                    <form class="mt-3 collapse review-form-box" id="formRegister" action="signup.php">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="InputName" class="mb-0">First Name</label>
