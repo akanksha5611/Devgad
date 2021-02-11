@@ -29,7 +29,9 @@ $conn = Connect();
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
 
+    
 </head>
 
 <body>
@@ -652,16 +654,21 @@ $conn = Connect();
                 </div>
             </div>
         </div>
+        <div class="myButton">
+            <a href="floater.html"></a>
+        </div>
+
     </footer>
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
+        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#"></a> Design By :
             <a href="https://html.design/">html design</a></p>
     </div>
     <!-- End copyright  -->
 
+    <a href="floater.html" id="myButton" style="display: none;" title="floater.html" >&uarr;</a>
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
