@@ -24,75 +24,21 @@ $conn = Connect();
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
 </head>
 
 <body>
-    <!-- Start Main Top -->
-    <div class="main-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
-                    </div>
-                    <div class="our-link">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="login-box">
-						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option>Register Here</option>
-							<option>Sign In</option>
-						</select>
-					</div>
-                    <div class="text-slid-box">
-                        <div id="offer-box" class="carouselTicker">
-                            <ul class="offer-box">
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Mango
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Alphanso
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Mango
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Mango
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Main Top -->
+
 
     <!-- Start Main Top -->
     <header class="main-header">
@@ -108,30 +54,38 @@ $conn = Connect();
                 </div>
                 <!-- End Header Navigation -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+
+                       <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="#cart.html">MyCart</a></li>
+								<li><a href="#shop-detail.html">FreshShop</a></li>
+                            <!-- 
+                                <li><a href="#shop.html">Shop</a></li> 
                                 <li><a href="checkout.php">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
                                 <li><a href="wishlist.html">Wishlist</a></li>
+                             -->
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                     <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
 
+
+
+                   
                 <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
+                 <!-- /.
+                 
+                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
@@ -143,36 +97,13 @@ $conn = Connect();
 						</li>
                     </ul>
                 </div>
-                <!-- End Atribute Navigation -->
+                -->
+
+                <!-- End Atribute Navigation --> 
+           
+
             </div>
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-            <!-- End Side Menu -->
+            
         </nav>
         <!-- End Navigation -->
     </header>
@@ -313,11 +244,6 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
                         </div>
@@ -337,11 +263,6 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
                         </div>
@@ -358,18 +279,13 @@ $conn = Connect();
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4> Half Dozen Premium (Size A+) Ratnagiri Alphonso Mango (6 Fruits)</h4>
+                            <h4> Half Dozen Premium (Size A+) Ratnagiri Alphonso Mango <br> (6 Fruits)</h4>
                             <h5> ₹399.00</h5>
                         </div>
                     </div>
@@ -381,18 +297,13 @@ $conn = Connect();
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="#cart.html">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Kutch Kesar Mango 10 Kg.</h4>
+                            <h4>Premium Kutch Kesar Mango <br> {10 Kg.} </h4><br>
                             <h5>  ₹1399.00</h5>
                         </div>
                     </div>
@@ -426,11 +337,6 @@ $conn = Connect();
                                 With this online venture, we are positive that mango lovers will now be able to get mangoes of A grade quality & savor their absolute taste and health benefits.
                                 These export quality mangoes are also not easily available in the local markets hence, we have taken this initiative to bring ‘Original Ratnagiri Alphonso Mangoes’ directly from our farms to your doorsteps </p>
                             </div>
-                            <ul class="option-blog">
-                                <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#"><i class="far fa-comments"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -446,11 +352,6 @@ $conn = Connect();
                                     You can also be rest assured about our quality as every mango is handpicked on the day we ship them across to you. We are sure that our mangoes will entice you with their pleasing aromas & their low prices will surely impress you.
                                     Most of our customers have often complimented us that our mangoes when delivered are farm fresh, large sized, succulent and more flavored than any other mangoes that are available locally or online.  </p>
                             </div>
-                            <ul class="option-blog">
-                                <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#"><i class="far fa-comments"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -469,11 +370,6 @@ $conn = Connect();
                                     Gently press in and down as you slide the glass cup in between the mango skin and the mango flesh. <br>
                                     Let the mango flesh fall into the glass — it really is THAT easy!</p>
                             </div>
-                            <ul class="option-blog">
-                                <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#"><i class="far fa-comments"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -481,7 +377,7 @@ $conn = Connect();
         </div>
     </div>
     <!-- End Blog  -->
-
+    
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
@@ -578,14 +474,6 @@ $conn = Connect();
 				<div class="row">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
-							<h3>Business Time</h3>
-							<ul class="list-time">
-								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
 							<h3>Newsletter</h3>
 							<form class="newsletter-box">
 								<div class="form-group">
@@ -597,38 +485,10 @@ $conn = Connect();
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="#">About Us</a></li>
                                 <li><a href="#">Customer Service</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Delivery Information</a></li>
                             </ul>
@@ -646,29 +506,49 @@ $conn = Connect();
                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91 9619259407">+91 9619259407</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">devgadalphonso@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
+				</div>
+				<hr>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="myButton">
             <a href="floater.html"></a>
         </div>
 
     </footer>
+=======
+        
+>>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
+<<<<<<< HEAD
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#"></a> Design By :
             <a href="https://html.design/">html design</a></p>
     </div>
     <!-- End copyright  -->
 
     <a href="floater.html" id="myButton" style="display: none;" title="floater.html" >&uarr;</a>
+=======
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="footer-top-box">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <!-- End copyright  -->
+    </footer>
+>>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
@@ -687,6 +567,9 @@ $conn = Connect();
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+   
+</div>
+
 </body>
 
 </html>
