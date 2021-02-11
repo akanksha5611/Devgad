@@ -30,11 +30,6 @@ $conn = Connect();
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
 </head>
 
 <body>
@@ -515,27 +510,15 @@ $conn = Connect();
 				<hr>
             </div>
         </div>
-<<<<<<< HEAD
         <div class="myButton">
             <a href="floater.html"></a>
         </div>
 
     </footer>
-=======
-        
->>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-<<<<<<< HEAD
-        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#"></a> Design By :
-            <a href="https://html.design/">html design</a></p>
-    </div>
-    <!-- End copyright  -->
-
-    <a href="floater.html" id="myButton" style="display: none;" title="floater.html" >&uarr;</a>
-=======
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-top-box">
                     <ul>
@@ -548,7 +531,6 @@ $conn = Connect();
     </div>
     <!-- End copyright  -->
     </footer>
->>>>>>> 46a4fec5629d2a1f5f7f30c9895ba2dbf514730e
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
