@@ -11,12 +11,12 @@ $conn = Connect();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Devgad Hapus</title>
+    <title>DevgadHapoos</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/faviconn.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-iconn.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -24,11 +24,12 @@ $conn = Connect();
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
+     
+    
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
     
 </head>
 
@@ -59,14 +60,14 @@ $conn = Connect();
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#cart.html">MyCart</a></li>
-								<li><a href="#shop-detail.html">FreshShop</a></li>
-                            <!-- 
-                                <li><a href="#shop.html">Shop</a></li> 
+                                <li><a href="cart.html">MyCart</a></li>
+								<li><a href="shop-detail.html">FreshShop</a></li>
+                            
+                                <li><a href="shop.html">Shop</a></li> 
                                 <li><a href="checkout.php">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
                                 <li><a href="wishlist.html">Wishlist</a></li>
-                             -->
+                            
                             </ul>
                         </li>
                      <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
@@ -460,7 +461,7 @@ $conn = Connect();
         </div>
     </div>
     <!-- End Instagram Feed  -->
-
+    
 
     <!-- Start Footer  -->
     <footer>
@@ -523,10 +524,21 @@ $conn = Connect();
                         <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
+                <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=91-----" target="_blank">    
+            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
+                            </div>
             </div>
+            
     </div>
+
+    
+    
     <!-- End copyright  -->
     </footer>
+   
+
+
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
@@ -547,6 +559,7 @@ $conn = Connect();
     <script src="js/custom.js"></script>
    
 </div>
+
 
 </body>
 

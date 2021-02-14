@@ -1272,6 +1272,12 @@
      bottom: 0;
      opacity: 1;
 }
+
+
+
+
+
+
 /*------------------------------------------------------------------ Footer Main -------------------------------------------------------------------*/
  .footer-main{
      padding: 70px 0px;
@@ -1488,6 +1494,21 @@
  .footer-link-contact ul li p a:hover{
      color: #b0b435;
 }
+
+.whatsapp {
+    position: static;
+    left: 100px;
+    right: 0px;
+    top: 52%;
+}
+.whatsapp h5 {
+    color: white;
+    background: #20b20f;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+
 /*------------------------------------------------------------------ Copyright -------------------------------------------------------------------*/
  .footer-copyright{
      background: #060606;
