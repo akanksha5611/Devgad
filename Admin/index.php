@@ -56,7 +56,7 @@ $conn = Connect();
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-
+                        
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -70,9 +70,13 @@ $conn = Connect();
                             
                             </ul>
                         </li>
+
                      <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
                     </ul>
+                    <li><a href="#">My Account <?php if(isset($_SESSION['user'])){echo('hello');}else{echo('world');} ?></a></li>
+
                 </div>
+                
                 <!-- /.navbar-collapse -->
 
 
@@ -529,7 +533,7 @@ $conn = Connect();
                     </ul>
                 </div>
                 <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=91-----" target="_blank">    
+            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
             <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
                             </div>
             </div>

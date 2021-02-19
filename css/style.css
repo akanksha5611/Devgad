@@ -331,8 +331,7 @@
 	font-size: 13px;
 }
 
- .main-header{
-}
+ 
  .search a{
      color: #b0b435;
 }
@@ -629,9 +628,7 @@
 	 padding: 6px 25px;
 }
 
- nav.navbar.bootsnav ul.navbar-nav li.dropdown ul.dropdown-menu li a:hover{
-	 
- }
+
  nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
      left: auto;
 }
@@ -932,8 +929,7 @@
  .filter-button-group button.active{
      background: #000000;
 }
- .filter-button-group button{
-}
+ 
  .products-single {
      overflow: hidden;
      position: relative;
@@ -1514,7 +1510,8 @@
 }
 
 .whatsapp {
-    left: 100px;
+    position: static;
+    
     right: 0px;
     top: 52%;
 }
@@ -2232,7 +2229,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #111111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
