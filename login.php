@@ -31,6 +31,7 @@ else{
     // else{
         // $_SESSION['type'] = 'Customer';
         $_SESSION['user'] = $_POST["InputEmail"];
+        echo('<script>alert("kya yaar")</script>');
     // }
 }
 // header("Location: ../../myaccount.php");
