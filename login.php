@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysqli = new mysqli("localhost","root","","devgad");
+$mysqli = new mysqli("localhost","root","root","devgad");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -36,4 +36,8 @@ else{
 }
 // header("Location: ../../myaccount.php");
 header("Location: ./index.php");
-?>
+// <?php if
+//                     (isset($_SESSION['user'])){echo " Hello".$_SESSION['user_name'];
+//                     }else{echo('world');}
+//                      ?>
+
