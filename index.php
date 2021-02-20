@@ -4,6 +4,7 @@
 <?php 
 session_start();
 require 'connection.php';
+// require 'signup.php';
 $conn = Connect();
 ?>
 
@@ -73,8 +74,11 @@ $conn = Connect();
 
                      <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
                     </ul>
-                    <li><a href="#">My Account <?php if(isset($_SESSION['user'])){echo('hello');}else{echo('world');} ?></a></li>
-
+                    <li><a href="#"><?php if
+                    (isset($_SESSION['user'])){echo " Hello " .$_SESSION['user'];
+                    }else{echo('World');}
+                     ?></a></li>
+ 
                 </div>
                 
                 <!-- /.navbar-collapse -->
