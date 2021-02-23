@@ -236,20 +236,21 @@ $conn = Connect();
                 <div class="col-lg-12">
                     <div class="special-menu text-center">
                         <div class="button-group filter-button-group">
-                            <button class="active" data-filter="*">All</button>
-                            <button data-filter=".top-featured">Top featured</button>
-                            <button data-filter=".best-seller">Best seller</button>
+                            <button class="active" data-filter="*">All categories</button>
+                            <button data-filter=".top-featured">Devgad Alphonso</button>
+                            <button data-filter=".top-featured">Ratnagiri Alphanso</button>
+                            <button data-filter=".best-seller">Kutch Kesari</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row special-list">
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="sale">Sale</p>
+                                <p class="sale">5 Dozen<br> Size A+</p>
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
@@ -258,17 +259,17 @@ $conn = Connect();
                         </div>
                         <div class="why-text">
                             <h4>
-                                Half Dozen Premium (Size A+) Ratnagiri Alphonso Mangoes (6 Fruits)</h4>
-                            <h5> ₹690.00</h5>
+                                Five Dozen (Size A+) Devgad Alphonso Mangoes (60 Fruits)</h4>
+                            <h5> ₹2200.00</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="new">New</p>
+                                <p class="new">5 Dozen<br> Size A</p>
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
@@ -276,17 +277,17 @@ $conn = Connect();
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>One Dozen Premium (Size A) Devgad Alphonso Mangoes (12 Fruits)</h4>
-                            <h5> ₹950.00</h5>
+                            <h4>Five Dozen (Size A) Devgad Alphonso Mangoes (60 Fruits)</h4>
+                            <h5> ₹2000.00</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="sale">Sale</p>
+                                <p class="sale">10 Dozen <br> Size A+</p>
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
@@ -294,17 +295,17 @@ $conn = Connect();
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4> Half Dozen Premium (Size A+) Ratnagiri Alphonso Mango <br> (6 Fruits)</h4>
-                            <h5> ₹399.00</h5>
+                            <h4> Ten Dozen (Size A+) Devgad Alphonso Mango  (120 Fruits)</h4>
+                            <h5> ₹4000.00</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="sale">Sale</p>
+                                <p class="sale">2 Dozen <br> Premium</p>
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
@@ -312,14 +313,86 @@ $conn = Connect();
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Premium Kutch Kesar Mango <br> {10 Kg.} </h4><br>
-                            <h5>  ₹1399.00</h5>
+                            <h4>Two Dozen Premium Devgad Alphonso Mango {24 Fruits} </h4>
+                            <h5>  ₹1000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">5 Dozen<br> Size A</p>
+                            </div>
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Five Dozen (Size A) Ratnagiri Alphonso Mangoes (60 Fruits)</h4>
+                            <h5> ₹2000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">10 Dozen <br> Size A+</p>
+                            </div>
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4> Ten Dozen (Size A+) Ratnagiri Alphonso Mango  (120 Fruits)</h4>
+                            <h5> ₹4000.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd -->
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">10 Kg.</p>
+                            </div>
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>
+                                10Kg. Kutch Kesar Mangoes (10 Kg )</h4>
+                            <h5> ₹1500.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale"> 15Kg<br> Fresh</p>
+                            </div>
+                            <img src="images/peti2.png" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <a class="cart" href="#cart.html">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4> Kutchkesar Mango 15Kg </h4>
+                            <h5>  ₹1000.00</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- End Products  -->
 
     <!-- Start Blog  -->
