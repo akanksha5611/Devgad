@@ -3,9 +3,13 @@
 
 <?php 
 session_start();
+$mysqli = new mysqli("localhost","root","root","devgad");
+
 require 'connection.php';
 // require 'signup.php';
 $conn = Connect();
+$res = $mysqli->query('SELECT `user_name` FROM `user` WHERE `user_email` Is $_SESSION[`user`]');
+echo $res;
 ?>
 
 <head>
@@ -27,10 +31,10 @@ $conn = Connect();
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
       
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
-     
+      
     
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -65,7 +69,7 @@ $conn = Connect();
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">MyCart</a></li>
+                                <li><a href="cart.php">MyCart</a></li>
 								<li><a href="shop-detail.html">FreshShop</a></li>
                             
                                 <li><a href="shop.html">Shop</a></li> 
@@ -75,20 +79,22 @@ $conn = Connect();
                             
                             </ul>
                         </li>
-
+                      
                      <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
                     </ul>
-                    <li><a href="#"><?php if
-                    (isset($_SESSION['user'])){echo " Hello " .$_SESSION['user'];
-                    }else{echo('World');}
+                    <li><a href="#">
+                    <?php
+                    if
+                    (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo   '<a href="logout.php"><span class="glyphicon glyphicon-log-out"> LOGOUT </span></a>';
+                    }else
+
+                     
                      ?></a></li>
  
                 </div>
                 
                 <!-- /.navbar-collapse -->
-
-                <a href="logout.php"><span class="glyphicon glyphicon-log-out"> LOGOUT </span></a></li>
-
+              
 
                    
                 <!-- Start Atribute Navigation -->

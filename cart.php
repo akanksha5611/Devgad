@@ -78,6 +78,7 @@
             <tbody>
               <?php
                 require 'connection.php';
+                $conn = Connect();
                 $stmt = $conn->prepare('SELECT * FROM cart');
                 $stmt->execute();
                 $result = $stmt->get_result();

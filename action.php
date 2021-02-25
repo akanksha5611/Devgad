@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	require 'connection.php';
+	$conn = Connect();
 
 	// Add products into the cart table
 	if (isset($_POST['pid'])) {
@@ -39,6 +40,7 @@
 
 	// Get no.of items available in the cart table
 	if (isset($_GET['cartItem']) && isset($_GET['cartItem']) == 'cart_item') {
+
 	  $stmt = $conn->prepare('SELECT * FROM cart');
 	  $stmt->execute();
 	  $stmt->store_result();
