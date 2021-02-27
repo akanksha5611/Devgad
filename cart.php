@@ -64,8 +64,8 @@
                 </td>
               </tr>
               <tr>
-                <th>ID</th>
-                <th>Image</th>
+                <!-- <th>ID</th>
+                <th>Image</th> -->
                 <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
