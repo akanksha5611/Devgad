@@ -43,7 +43,7 @@ $conn = Connect();
 
 <body>
     <!-- Start Main Top -->
-    <div class="main-top">
+    <!-- <div class="main-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -105,7 +105,7 @@ $conn = Connect();
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
@@ -144,7 +144,7 @@ $conn = Connect();
                 <!-- /.navbar-collapse -->
 
                 <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
+                <!-- <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
@@ -153,11 +153,17 @@ $conn = Connect();
 							<p>My Cart</p>
 					</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- End Atribute Navigation -->
             </div>
             <!-- Start Side Menu -->
-            <div class="side">
+          
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+ <!-- <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
@@ -183,12 +189,6 @@ $conn = Connect();
                     </ul>
                 </li>
             </div>
-            <!-- End Side Menu -->
-        </nav>
-        <!-- End Navigation -->
-    </header>
-    <!-- End Main Top -->
-
     <!-- Start Top Search -->
     <div class="top-search">
         <div class="container">
@@ -262,7 +262,7 @@ $conn = Connect();
                     </form>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                         <div class="title-left">
@@ -477,7 +477,7 @@ $conn = Connect();
             </div>
 
         </div>
-    </div>
+    </div> -->
     <!-- End Cart -->
 
     <!-- Start Instagram Feed  -->

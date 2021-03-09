@@ -32,7 +32,7 @@ $sql = "INSERT INTO user (user_name, user_lastname, user_email, user_password) V
 echo 'reached here';
     if ($mysqli->query($sql) === TRUE) {
         // $_SESSION['type'] = 'Customer';
-        $_SESSION['user'] = $_POST["InputEmail1"];
+        $_SESSION['user'] = $_POST["InputName"];
         header("Location: ./checkout.php");
         // header("Location: ../../myaccount.php");
       } else {

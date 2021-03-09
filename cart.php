@@ -1,5 +1,9 @@
 <?php
   session_start();
+  $mysqli = new mysqli("localhost","root","root","devgad");
+  require 'connection.php';
+  $conn = Connect();
+  $res = $mysqli->query('SELECT * FROM `product` WHERE `product`.`id` = 1');
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +68,8 @@
                 </td>
               </tr>
               <tr>
-                <th>ID</th>
-                <th>Image</th>
+                <!-- <th>ID</th>
+                <th>Image</th> -->
                 <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -78,6 +82,7 @@
             <tbody>
               <?php
                 require 'connection.php';
+                $conn = Connect();
                 $stmt = $conn->prepare('SELECT * FROM cart');
                 $stmt->execute();
                 $result = $stmt->get_result();
@@ -111,7 +116,7 @@
                 <td colspan="2"><b>Grand Total</b></td>
                 <td><b><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;<?= number_format($grand_total,2); ?></b></td>
                 <td>
-                  <a href="checkout.php" class="btn btn-info <?= ($grand_total > 1) ? '' : 'disabled'; ?>"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
+                  <a href="cartcheckout.php" class="btn btn-info <?= ($grand_total > 1) ? '' : 'enable'; ?>"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
                 </td>
               </tr>
             </tbody>

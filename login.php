@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysqli = new mysqli("localhost","root","","devgad");
+$mysqli = new mysqli("localhost","root","root","devgad");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -30,7 +30,7 @@ else{
     // }
     // else{
         // $_SESSION['type'] = 'Customer';
-        $_SESSION['user'] = $_POST["InputEmail"];
+        $_SESSION['user'] = $row['user_name'];
         echo('<script>alert("kya yaar")</script>');
     // }
 }

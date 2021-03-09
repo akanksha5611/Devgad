@@ -3,9 +3,13 @@
 
 <?php 
 session_start();
+$mysqli = new mysqli("localhost","root","root","devgad");
+
 require 'connection.php';
 // require 'signup.php';
 $conn = Connect();
+$res = $mysqli->query('SELECT `user_name` FROM `user` WHERE `user_email` Is $_SESSION[`user`]');
+echo $res;
 ?>
 
 <head>
@@ -27,10 +31,10 @@ $conn = Connect();
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
       
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
-     
+      
     
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -65,30 +69,32 @@ $conn = Connect();
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">MyCart</a></li>
-								<li><a href="shop-detail.html">FreshShop</a></li>
+                                <li><a href="cart.php">MyCart</a></li>
+								<!-- <li><a href="shop-detail.html">FreshShop</a></li> -->
                             
                                 <li><a href="shop.html">Shop</a></li> 
                                 <li><a href="checkout.php">Checkout</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <!-- <li><a href="my-account.html">My Account</a></li> -->
+                                <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                             
                             </ul>
                         </li>
-
+                      
                      <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
                     </ul>
-                    <li><a href="#"><?php if
-                    (isset($_SESSION['user'])){echo " Hello " .$_SESSION['user'];
-                    }else{echo('World');}
+                    <li><a href="#">
+                    <?php
+                    if
+                    (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
+                    }else
+
+                     
                      ?></a></li>
  
                 </div>
                 
                 <!-- /.navbar-collapse -->
-
-                <a href="logout.php"><span class="glyphicon glyphicon-log-out"> LOGOUT </span></a></li>
-
+              
 
                    
                 <!-- Start Atribute Navigation -->
@@ -254,7 +260,7 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php?id=1">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -273,7 +279,7 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -344,7 +350,7 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php?pid=">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -362,7 +368,7 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -380,7 +386,7 @@ $conn = Connect();
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#cart.html">Add to Cart</a>
+                                <a class="cart" href="cart.php">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -402,7 +408,7 @@ $conn = Connect();
                 <div class="col-lg-12">
                     <div class="title-all text-center">
                         <h1>latest blog</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -608,16 +614,20 @@ $conn = Connect();
     <div class="footer-copyright">
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-top-box">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
                 <div class="whatsapp">
             <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
             <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
                             </div>
+                    <!-- <ul>
+                        <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
+            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
+                            </div> -->
             </div>
             
     </div>

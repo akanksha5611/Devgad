@@ -1,6 +1,6 @@
 <?php
 	require 'connection.php';
-
+  $conn = Connect();
 	$grand_total = 0;
 	$allItems = '';
 	$items = [];
