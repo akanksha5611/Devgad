@@ -260,7 +260,7 @@ echo $res;
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="cart.php">Add to Cart</a>
+                                <a class="cart" href="cart.php?id=1">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -350,7 +350,7 @@ echo $res;
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php?pid=">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -368,7 +368,7 @@ echo $res;
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#">Add to Cart</a>
+                                <a class="cart" href="cart.php">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -386,7 +386,7 @@ echo $res;
                             </div>
                             <img src="images/peti2.png" class="img-fluid" alt="Image">
                             <div class="mask-icon">
-                                <a class="cart" href="#cart.html">Add to Cart</a>
+                                <a class="cart" href="cart.php">Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
