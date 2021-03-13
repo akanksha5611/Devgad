@@ -35,7 +35,7 @@ else{
     // }
 }
 // header("Location: ../../myaccount.php");
-header("Location: ./index.php");
+header("Location: ./cart.php");
 // <?php if
 //                     (isset($_SESSION['user'])){echo " Hello".$_SESSION['user_name'];
 //                     }else{echo('world');}
