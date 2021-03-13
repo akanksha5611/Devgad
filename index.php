@@ -743,40 +743,28 @@ echo $res;
             <a href="floater.html"></a>
         </div>
 
-    </footer>
+    
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="footer-top-box">
-                <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
-            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
-                            </div>
-                    <!-- <ul>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+                     <!-- <ul>
                         <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
-            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
-                            </div> -->
+                        
+                    </ul> -->
+                </div> 
+        
             </div>
             
     </div>
 
-    
+    </footer>  
     
     <!-- End copyright  -->
-    </footer>
-   
-
-
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-
+  
+    
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -795,7 +783,20 @@ echo $res;
     <script src="js/custom.js"></script>
    
 </div>
-
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+(function () {
+var options = {
+whatsapp: "9619374214", // WhatsApp number
+call_to_action: "Message us", // Call to action
+position: "left", // Position may be 'right' or 'left'
+};
+var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+})();
+</script>
 
 </body>
 
