@@ -228,7 +228,37 @@ echo $res;
 	</div>
 
     <!-- Start Products  -->
-    <div class="products-box">
+
+
+    <body>
+  <!-- Navbar start -->
+  <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="index.php"><i class="fas fa-mobile-alt"></i>&nbsp;&nbsp;Mobile Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.php"><i class="fas fa-mobile-alt mr-2"></i>Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-th-list mr-2"></i>Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checkout.php"><i class="fas fa-money-check-alt mr-2"></i>Checkout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+  <!-- Navbar end -->
+
+  <!-- Displaying Products Start -->
+
+  <div class="products-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -250,6 +280,112 @@ echo $res;
                     </div>
                 </div>
             </div>
+
+  <div class="container">
+    <div id="message"></div>
+    <div class="row mt-2 pb-3">
+     <?php
+  		// 	include 'connection.php';
+  		 	$stmt = $conn->prepare('SELECT * FROM product');
+  		 	$stmt->execute();
+  		 	$result = $stmt->get_result();
+  		 	while ($row = $result->fetch_assoc()):
+  		 ?>
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
+        <div class="card-deck">
+          <div class="card p-2 border-secondary mb-2">
+            <img src="<?= $row['product_image'] ?>" class="card-img-top" height="250">
+            <div class="card-body p-1">
+              <h4 class="card-title text-center text-info"><?= $row['product_name'] ?></h4>
+              <h5 class="card-text text-center text-danger"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;<?= number_format($row['product_price'],2) ?>/-</h5>
+
+            </div>
+            <div class="card-footer p-1">
+              <form action="" class="form-submit">
+                <div class="row p-2">
+                  <div class="col-md-6 py-1 pl-4">
+                    <b>Quantity : </b>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control pqty" value="<?= $row['product_qty'] ?>">
+                  </div>
+                </div>
+                <input type="hidden" class="pid" value="<?= $row['id'] ?>">
+                <input type="hidden" class="pname" value="<?= $row['product_name'] ?>">
+                <input type="hidden" class="pprice" value="<?= $row['product_price'] ?>">
+                <input type="hidden" class="pimage" value="<?= $row['product_image'] ?>">
+                <input type="hidden" class="pcode" value="<?= $row['product_code'] ?>">
+                <button class="btn btn-info btn-block addItemBtn"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Add to
+                  cart</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php endwhile; ?>
+    </div>
+    
+  </div>
+
+  <!-- Displaying Products End -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    // Send product details in the server
+    $(".addItemBtn").click(function(e) {
+      e.preventDefault();
+      var $form = $(this).closest(".form-submit");
+      var pid = $form.find(".pid").val();
+      var pname = $form.find(".pname").val();
+      var pprice = $form.find(".pprice").val();
+      var pimage = $form.find(".pimage").val();
+      var pcode = $form.find(".pcode").val();
+
+      var pqty = $form.find(".pqty").val();
+
+      $.ajax({
+        url: 'action.php',
+        method: 'post',
+        data: {
+          pid: pid,
+          pname: pname,
+          pprice: pprice,
+          pqty: pqty,
+          pimage: pimage,
+          pcode: pcode
+        },
+        success: function(response) {
+          $("#message").html(response);
+          window.scrollTo(0, 0);
+          load_cart_item_number();
+        }
+      });
+    });
+
+    // Load total no.of items added in the cart and display in the navbar
+    load_cart_item_number();
+
+    function load_cart_item_number() {
+      $.ajax({
+        url: 'action.php',
+        method: 'get',
+        data: {
+          cartItem: "cart_item"
+        },
+        success: function(response) {
+          $("#cart-item").html(response);
+        }
+      });
+    }
+  });
+  </script>
+</body>
+
+  
 
             <div class="row special-list">
                 <div class="col-lg-3 col-md-6 special-grid">
@@ -607,40 +743,28 @@ echo $res;
             <a href="floater.html"></a>
         </div>
 
-    </footer>
+    
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="footer-top-box">
-                <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
-            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
-                            </div>
-                    <!-- <ul>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+                     <!-- <ul>
                         <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=919619374214" target="_blank">    
-            <h5><i class="fa fa-whatsapp fa-3x fa-spin" aria-hidden="true"></i></h5></a>
-                            </div> -->
+                        
+                    </ul> -->
+                </div> 
+        
             </div>
             
     </div>
 
-    
+    </footer>  
     
     <!-- End copyright  -->
-    </footer>
-   
-
-
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-
+  
+    
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -659,7 +783,20 @@ echo $res;
     <script src="js/custom.js"></script>
    
 </div>
-
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+(function () {
+var options = {
+whatsapp: "9619374214", // WhatsApp number
+call_to_action: "Message us", // Call to action
+position: "left", // Position may be 'right' or 'left'
+};
+var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+})();
+</script>
 
 </body>
 
