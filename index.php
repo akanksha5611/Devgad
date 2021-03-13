@@ -65,15 +65,40 @@ echo $res;
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>
                         
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+
                             <ul class="dropdown-menu">
+                            <?php 
+                                if(isset($_SESSION['user']))
+                            {
+                            ?>
                                 <li><a href="cart.php">MyCart</a></li>
+                                <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
+                                <!-- <ul class="navbar-nav ml-auto"> -->
+                                    <li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
+                                    </li>
+                         
+                                <?php 
+                                    }
+                                    ?>
 								<!-- <li><a href="shop-detail.html">FreshShop</a></li> -->
                             
                                 <li><a href="shop.html">Shop</a></li> 
                                 <li><a href="checkout.php">Checkout</a></li>
+                                
+                                
+
+
                                 <!-- <li><a href="my-account.html">My Account</a></li> -->
                                 <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                             
@@ -318,6 +343,9 @@ echo $res;
                 <button class="btn btn-info btn-block addItemBtn"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Add to
                   cart</button>
               </form>
+              <?php
+              header('location:cart.php');
+              ?>
             </div>
           </div>
         </div>

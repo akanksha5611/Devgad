@@ -28,7 +28,7 @@ if($count == 1){
 }
 else{
 
-$sql = "INSERT INTO user (user_name, user_lastname, user_email, user_password) VALUES ('".$_POST["InputName"]."','".$_POST["InputLastname"]."', '".$_POST["InputEmail1"]."','".$_POST["InputPassword1"]."');";
+$sql = "INSERT INTO user (user_name, user_lastname,user_id, user_email, user_password) VALUES ('".$_POST["InputName"]."','".$_POST["InputLastname"]."', '".$_POST["InputEmail1"]."' ,'".$_POST["InputEmail1"]."','".$_POST["InputPassword1"]."');";
 echo 'reached here';
     if ($mysqli->query($sql) === TRUE) {
         // $_SESSION['type'] = 'Customer';
