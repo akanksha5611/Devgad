@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-$mysqli = new mysqli("localhost","root","","devgad");
+$mysqli = new mysqli("localhost","root","root","devgad");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
 }
 
-$sql = "SELECT * FROM user WHERE user_email = '".$_POST["InputEmail"]."' and user_id= '".$_POST["InputEmail"]."' and user_password = '".$_POST["InputPassword"]."';";
+$sql = "SELECT * FROM user WHERE user_email = '".$_POST["InputEmail"]."' and user_password = '".$_POST["InputPassword"]."';";
 $res = $mysqli->query($sql);
 $row= mysqli_fetch_assoc($res);
 $count=mysqli_num_rows($res);
@@ -35,7 +35,7 @@ else{
     // }
 }
 // header("Location: ../../myaccount.php");
-header("Location: ./cart.php");
+header("Location: ./index.php");
 // <?php if
 //                     (isset($_SESSION['user'])){echo " Hello".$_SESSION['user_name'];
 //                     }else{echo('world');}
