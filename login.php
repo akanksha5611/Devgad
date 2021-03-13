@@ -8,7 +8,7 @@ if ($mysqli -> connect_errno) {
   exit();
 }
 
-$sql = "SELECT * FROM user WHERE user_email = '".$_POST["InputEmail"]."' and user_password = '".$_POST["InputPassword"]."';";
+$sql = "SELECT * FROM user WHERE user_email = '".$_POST["InputEmail"]."' and user_id= '".$_POST["InputEmail"]."' and user_password = '".$_POST["InputPassword"]."';";
 $res = $mysqli->query($sql);
 $row= mysqli_fetch_assoc($res);
 $count=mysqli_num_rows($res);
