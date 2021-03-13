@@ -3,7 +3,7 @@
 
 <?php 
 session_start();
-$mysqli = new mysqli("localhost","root","root","devgad");
+$mysqli = new mysqli("localhost","root","","devgad");
 
 require 'connection.php';
 // require 'signup.php';
@@ -31,7 +31,7 @@ echo $res;
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
       
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
       
@@ -775,21 +775,17 @@ echo $res;
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-
-                     <!-- <ul>
+    <div class="footer-copyright">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="footer-top-box">
+                    <ul>
                         <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        
-                    </ul> -->
-                </div> 
-        
+                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            
     </div>
-
-    </footer>  
-    
     <!-- End copyright  -->
   
     
