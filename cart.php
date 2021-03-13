@@ -5,6 +5,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+   if(isset($_SESSION['user']))
+{
+?>
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Sahil Kumar">
@@ -218,3 +222,6 @@ var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s,
 </body>
 
 </html>
+<?php 
+   }
+?>
