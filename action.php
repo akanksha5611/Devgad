@@ -3,12 +3,12 @@
 	require 'connection.php';
 	$conn = Connect();
 
+
 	// Add products into the cart table
 	if (isset($_POST['pid'])) {
 	  $pid = $_POST['pid'];
 	  $pname = $_POST['pname'];
 	  $pprice = $_POST['pprice'];
-      
 	  $pimage = $_POST['pimage'];
 	  $pcode = $_POST['pcode'];
 	  $pqty = $_POST['pqty'];
@@ -40,7 +40,6 @@
 
 	// Get no.of items available in the cart table
 	if (isset($_GET['cartItem']) && isset($_GET['cartItem']) == 'cart_item') {
-
 	  $stmt = $conn->prepare('SELECT * FROM cart');
 	  $stmt->execute();
 	  $stmt->store_result();
