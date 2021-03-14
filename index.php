@@ -150,7 +150,7 @@ echo $res;
     <!-- End Main Top -->
 
     <!-- Start Top Search -->
-    <div class="top-search">
+    <!-- <div class="top-search">
         <div class="container">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -158,7 +158,7 @@ echo $res;
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Top Search -->
 
     <!-- Start Slider -->
@@ -413,7 +413,7 @@ echo $res;
   </script>
 </body>
 
-  
+<!--   
 
             <div class="row special-list">
                 <div class="col-lg-3 col-md-6 special-grid">
@@ -487,9 +487,9 @@ echo $res;
                             <h5>  ₹1000.00</h5>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- 2nd -->
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                <!-- <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
@@ -522,9 +522,9 @@ echo $res;
                             <h5> ₹4000.00</h5>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- 3rd -->
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                <!-- <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
@@ -561,7 +561,7 @@ echo $res;
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <!-- End Products  -->
 
@@ -767,15 +767,15 @@ echo $res;
 				<hr>
             </div>
         </div>
-        <div class="myButton">
+        <!-- <div class="myButton">
             <a href="floater.html"></a>
-        </div>
+        </div> -->
 
     
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-top-box">
                     <ul>
@@ -785,9 +785,9 @@ echo $res;
                     </ul>
                 </div>
             </div>
-    </div>
+    </div> -->
     <!-- End copyright  -->
-  
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
     
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
