@@ -17,6 +17,7 @@
   <title>Cart</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
+  
 </head>
 
 <body>
@@ -225,4 +226,3 @@ var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s,
 <?php 
    }
 ?>
-

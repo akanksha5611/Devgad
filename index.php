@@ -3,7 +3,7 @@
 
 <?php 
 session_start();
-$mysqli = new mysqli("localhost","root","","devgad");
+$mysqli = new mysqli("localhost","root","root","devgad");
 
 require 'connection.php';
 // require 'signup.php';
@@ -65,7 +65,7 @@ echo $res;
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>
+                        
                         
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
@@ -95,13 +95,6 @@ echo $res;
                             
                                 <li><a href="shop.html">Shop</a></li> 
                                 <li><a href="checkout.php">Checkout</a></li>
-                                
-                                
-
-
-                                <!-- <li><a href="my-account.html">My Account</a></li> -->
-                                <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
-                            
                             </ul>
                         </li>
                       
@@ -112,7 +105,8 @@ echo $res;
                     if
                     (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
                     }else
-
+                    
+                    '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
                      
                      ?></a></li>
  
@@ -344,7 +338,7 @@ echo $res;
                   cart</button>
               </form>
               <?php
-              header('location:cart.php');
+            //   header('location:cart.php');
               ?>
             </div>
           </div>

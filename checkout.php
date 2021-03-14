@@ -176,6 +176,9 @@ $conn = Connect();
                         <button type="submit" class="btn hvr-hover">Login</button>
                     </form>
                 </div>
+                <?php
+                // header("Location: ./cart.php");
+                ?>
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="title-left">
                         <h3>Create New Account</h3>
