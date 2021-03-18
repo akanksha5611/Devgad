@@ -3,7 +3,7 @@
 
 <?php 
 session_start();
-$mysqli = new mysqli("localhost","root","root","devgad");
+$mysqli = new mysqli("localhost","root","","devgad");
 
 require 'connection.php';
 // require 'signup.php';
@@ -296,7 +296,7 @@ echo $res;
                 <input type="hidden" class="pprice" value="<?= $row['product_price'] ?>">
                 <input type="hidden" class="pimage" value="<?= $row['product_image'] ?>">
                 <input type="hidden" class="pcode" value="<?= $row['product_code'] ?>">
-                <button class="btn btn-info btn-block addItemBtn"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Add to
+                <button onclick="location.href='cart.php'" class="btn btn-info btn-block addItemBtn"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Add to
                   cart</button>
               </form>
               <?php

@@ -1,10 +1,6 @@
 <?php
   session_start();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
    if(isset($_SESSION['user']))
 {
@@ -225,4 +221,7 @@ var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s,
 </html>
 <?php 
    }
+   else
+   header("Location: http://localhost:81/devgad/checkout.php"); 
+
 ?>
