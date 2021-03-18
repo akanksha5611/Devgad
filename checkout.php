@@ -206,6 +206,13 @@ $conn = Connect();
                     </form>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <!-- <div class="row">
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">

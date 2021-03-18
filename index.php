@@ -104,56 +104,18 @@ echo $res;
                     <?php
                     if
                     (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
-                    }else
+                    } else 
+                      echo  '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
                     
-                    '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
-                     
-                     ?></a></li>
+                    ?></a></li>
  
                 </div>
-                
-                <!-- /.navbar-collapse -->
-              
-
-                   
-                <!-- Start Atribute Navigation -->
-                 <!-- /.
-                 
-                 <div class="attr-nav">
-                    <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu">
-							<a href="#">
-								<i class="fa fa-shopping-bag"></i>
-								<span class="badge">3</span>
-								<p>My Cart</p>
-							</a>
-						</li>
-                    </ul>
-                </div>
-                -->
-
-                <!-- End Atribute Navigation --> 
-           
-
-            </div>
+         </div>
             
         </nav>
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
-
-    <!-- Start Top Search -->
-    <!-- <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Top Search -->
 
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
