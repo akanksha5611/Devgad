@@ -1,17 +1,12 @@
 <?php
   session_start();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
    if(isset($_SESSION['user']))
 {
 ?>
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Sahil Kumar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Cart</title>
@@ -225,4 +220,7 @@ var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s,
 </html>
 <?php 
    }
+   else
+   header("Location: http://localhost:81/devgad/checkout.php"); 
+
 ?>
