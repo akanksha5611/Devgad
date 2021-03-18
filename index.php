@@ -110,49 +110,12 @@ echo $res;
                     ?></a></li>
  
                 </div>
-                
-                <!-- /.navbar-collapse -->
-              
-
-                   
-                <!-- Start Atribute Navigation -->
-                 <!-- /.
-                 
-                 <div class="attr-nav">
-                    <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu">
-							<a href="#">
-								<i class="fa fa-shopping-bag"></i>
-								<span class="badge">3</span>
-								<p>My Cart</p>
-							</a>
-						</li>
-                    </ul>
-                </div>
-                -->
-
-                <!-- End Atribute Navigation --> 
-           
-
-            </div>
+         </div>
             
         </nav>
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
-
-    <!-- Start Top Search -->
-    <!-- <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Top Search -->
 
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
