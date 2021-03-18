@@ -104,11 +104,10 @@ echo $res;
                     <?php
                     if
                     (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
-                    }else
+                    } else 
+                      echo  '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
                     
-                    '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
-                     
-                     ?></a></li>
+                    ?></a></li>
  
                 </div>
                 
