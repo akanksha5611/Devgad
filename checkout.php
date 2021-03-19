@@ -182,9 +182,9 @@ $conn = Connect();
                                 <label for="InputEmail" class="mb-0">Email Address</label>
                                 <input type="email" class="form-control" name="InputEmail" placeholder="Enter Email"> </div>
                                 <br>
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                                 <label for="InputEmail" class="mb-0">User Id</label>
-                                <input type="email" class="form-control" name="InputEmail" placeholder="Enter User id"> </div>
+                                <input type="email" class="form-control" name="InputEmail" placeholder="Enter User id"> </div> -->
                             <div class="form-group col-md-6">
                                 <label for="InputPassword" class="mb-0">Password</label>
                                 <input type="password" class="form-control" name="InputPassword" placeholder="Password"> </div>
@@ -208,9 +208,9 @@ $conn = Connect();
                             <div class="form-group col-md-6">
                                 <label for="InputLastname" class="mb-0">Last Name</label>
                                 <input type="text" class="form-control" name="InputLastname" placeholder="Last Name"> </div>
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                                 <label for="InputEmail" class="mb-0">User Id</label>
-                                <input type="email" class="form-control" name="InputEmail" placeholder="Enter User id"> </div>
+                                <input type="email" class="form-control" name="InputEmail" placeholder="Enter User id"> </div> -->
                             <div class="form-group col-md-6">
                                 <label for="InputEmail1" class="mb-0">Email Address</label>
                                 <input type="email" class="form-control" name="InputEmail1" placeholder="Enter Email"> </div>
