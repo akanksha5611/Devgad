@@ -55,7 +55,7 @@ echo $res;
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -78,12 +78,12 @@ echo $res;
                                 <li><a href="cart.php">MyCart</a></li>
                                 <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
                                 <!-- <ul class="navbar-nav ml-auto"> -->
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                     </li>
                                     <li class="nav-item">
                                     </li>
                                     <li class="nav-item">
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                     <a class="nav-link" href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
                                     </li>
@@ -93,7 +93,7 @@ echo $res;
                                     ?>
 								<!-- <li><a href="shop-detail.html">FreshShop</a></li> -->
                             
-                                <li><a href="shop.html">Shop</a></li> 
+                                <!-- <li><a href="shop.php">Shop</a></li>  -->
                                 <li><a href="checkout.php">Checkout</a></li>
                             </ul>
                         </li>
