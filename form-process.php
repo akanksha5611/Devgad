@@ -1,5 +1,10 @@
 <?php
+session_start();
+require 'connection.php';
+$conn = Connect();
+?>
 
+<?php
 $errorMSG = "";
 
 // NAME
@@ -31,7 +36,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "armanmia7@gmail.com";
+$EmailTo = "suyashshelake50@gmail.com";
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -51,6 +56,7 @@ $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
 $Body .= "\n";
+echo "success";
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
