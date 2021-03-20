@@ -1,9 +1,8 @@
 <?php
 
 session_start();
-require 'connection.php';
 include 'config.php';
-
+include 'connection.php';
 $conn = Connect();
 
 
@@ -24,17 +23,17 @@ if (isset($_POST['submit'])) {
     /*
      * Validate posted values.
      */
-    if (empty($productName)) {
+    if (empty($product_name)) {
         $errors[] = 'Please provide a product name.';
     }
 
-    if ($productQuantity == 0) {
-        $errors[] = 'Please provide the quantity.';
-    }
+    // if ($product_qty == 0) {
+    //     $errors[] = 'Please provide the quantity.';
+    // }
 
-    if (empty($productDescription)) {
-        $errors[] = 'Please provide a description.';
-    }
+    // if (empty($product_code)) {
+    //     $errors[] = 'Please provide a description.';
+    // }
 
     /*
      * Create "uploads" directory if it doesn't exist.
@@ -96,23 +95,23 @@ if (isset($_POST['submit'])) {
          * 
          * @link http://php.net/manual/en/mysqli.prepare.php
          */
-        $sql = 'INSERT INTO products (
-                    id,
-                    name,
-                    price,
-                    quantity,
-                    code,
-                    image
-                ) VALUES (
-                    ?, ? , ? , ? , ? ,?
-                )';
+        $sql = 'INSERT INTO product (
+            id,
+            name,
+            price,
+            quantity,
+            code,
+            image
+        ) VALUES (
+            ?, ? , ? , ? , ? ,?
+        )';
 
         /*
          * Prepare the SQL statement for execution - ONLY ONCE.
          * 
          * @link http://php.net/manual/en/mysqli.prepare.php
          */
-        $statement = $connection->prepare($sql);
+        // $statement = $connection->prepare($sql);
 
         /*
          * Bind variables for the parameter markers (?) in the 
@@ -120,22 +119,21 @@ if (isset($_POST['submit'])) {
          * argument of bind_param() is a string that contains one 
          * or more characters which specify the types for the 
          * corresponding bind variables.
-         * 
+      ion   * 
          * @link http://php.net/manual/en/mysqli-stmt.bind-param.php
          */
-        $statement->bind_param('isiiis', $id, $product_name, $product_price , $product_qty , $product_code , $product_image);
-
+        // $statement->bind_param('isiiis', $id, $product_name, $product_price , $product_qty , $product_code , $product_image);
         /*
          * Execute the prepared SQL statement.
          * When executed any parameter markers which exist will 
          * automatically be replaced with the appropriate data.
          * 
          * @link http://php.net/manual/en/mysqli-stmt.execute.php
-         */
-        $statement->execute();
+        //  */
+        // $statement->execute();
 
         // Read the id of the inserted product.
-        $lastInsertId = $connection->insert_id;
+        // $id = $connection->id;
 
         /*
          * Close the prepared statement. It also deallocates the statement handle.
@@ -144,26 +142,26 @@ if (isset($_POST['submit'])) {
          * 
          * @link http://php.net/manual/en/mysqli-stmt.close.php
          */
-        $statement->close();
+        // $statement->close();
 
         /*
          * Save a record for each uploaded file.
          */
         foreach ($filenamesToSave as $filename) {
             $sql = 'INSERT INTO product_images (
-                        product_id,
+                        id,
                         filename
                     ) VALUES (
                         ?, ?
                     )';
 
-            $statement = $connection->prepare($sql);
+            // $statement = $connection->prepare($sql);
 
-            $statement->bind_param('is', $id, $filename);
+            // $statement->bind_param('is', $id, $filename);
 
-            $statement->execute();
+            // $statement->execute();
 
-            $statement->close();
+            // $statement->close();
         }
 
         /*
@@ -171,9 +169,9 @@ if (isset($_POST['submit'])) {
          * 
          * @link http://php.net/manual/en/mysqli.close.php
          */
-        $connection->close();
+        // $connection->close();
 
-        $productSaved = TRUE;
+        // $productSaved = TRUE;
 
         /*
          * Reset the posted values, so that the default ones are now showed in the form.
@@ -183,7 +181,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -242,7 +239,7 @@ if (isset($_POST['submit'])) {
     </head>
     <body>
 
-         <div class="form-container">
+        <div class="form-container">
             <h2>Add a product</h2>
 
             <div class="messages">
@@ -256,23 +253,23 @@ if (isset($_POST['submit'])) {
             </div>
 
             <form action="addProduct.php" method="post" enctype="multipart/form-data">
-                <label for="name">Product ID</label>
-                <input type="text" id="name" name="name" value="<?php echo isset($id) ? $id : ''; ?>">
-
-                <form action="addProduct.php" method="post" enctype="multipart/form-data">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" value="<?php echo isset($product_name) ? $product_name : ''; ?>">
+
+                <form action="addProduct.php" method="post" enctype="multipart/form-data">
+                <label for="name">Product ID</label>
+                <input type="text" id="name" name="name" value="<?php echo isset($id) ? $id  : ''; ?>">
 
                 <form action="addProduct.php" method="post" enctype="multipart/form-data">
                 <label for="name">Price</label>
                 <input type="text" id="name" name="name" value="<?php echo isset($product_price) ? $product_price : ''; ?>">
 
                 <form action="addProduct.php" method="post" enctype="multipart/form-data">
-                <label for="name">Quantity</label>
-                <input type="text" id="name" name="name" value="<?php echo isset($product_qty) ? $product_qty : ''; ?>">
+                <label for="name">Product Code</label>
+                <input type="text" id="name" name="name" value="<?php echo isset($product_code) ? $product_code : ''; ?>">
 
-                <label for="quantity">Product Code</label>
-                <input type="number" id="quantity" name="quantity" min="0" value="<?php echo isset($product_image) ? $product_image : '0'; ?>">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="0" value="<?php echo isset($product_qty) ? $product_qty  : '0'; ?>">
 
                 <label for="file">Images</label>
                 <input type="file" id="file" name="file[]" multiple>
@@ -281,7 +278,6 @@ if (isset($_POST['submit'])) {
                     Submit
                 </button>
             </form>
-
             <?php
             if ($productSaved) {
                 ?>
