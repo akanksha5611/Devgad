@@ -3,7 +3,7 @@
 
 <?php 
 session_start();
-$mysqli = new mysqli("localhost","root","","devgad");
+$mysqli = new mysqli("localhost","root","root","devgad");
 
 require 'connection.php';
 // require 'signup.php';

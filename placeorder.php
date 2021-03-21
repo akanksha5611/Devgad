@@ -7,7 +7,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 	$mobile=mysqli_real_escape_string($con,$_POST['mobile']);
 	$address=mysqli_real_escape_string($con,$_POST['address']);
 	$product=mysqli_real_escape_string($con,$_POST['product']);
-	mysqli_query($con,"insert into contact_us(name,email,mobile,comment) values('$name','$email','$mobile','$address',$product')");
+	mysqli_query($con,"INSERT INTO orders(name,email,mobile,comment) values('$name','$email','$mobile','$address',$product')");
 	$msg="Thanks message";
 	
 	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Address</td><td>$address</td></tr><tr><td>Product</td><td>$product</td></tr></table>";
@@ -26,7 +26,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 	$mail->SetFrom("suyashshelake50@gmail.com");//GAMIL_EMAIL_ID
 	$mail->addAddress("suyashshelake50@gmail.com");//TO_EMAIL_ID
 	$mail->IsHTML(true);
-	$mail->Subject="New Contact Us";
+	$mail->Subject="New Order";
 	$mail->Body=$html;
 	$mail->SMTPOptions=array('ssl'=>array(
 		'verify_peer'=>false,

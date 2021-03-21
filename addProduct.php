@@ -177,6 +177,7 @@ if (isset($_POST['submit'])) {
          * Reset the posted values, so that the default ones are now showed in the form.
          * See the "value" attribute of each html input.
          */
+          
         $productName = $productQuantity = $productDescription = NULL;
     }
 }
