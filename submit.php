@@ -15,8 +15,8 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 	include('smtp/PHPMailerAutoload.php');
 	$mail=new PHPMailer(true);
 	$mail->isSMTP();
-	 $mail->SMTPDebug = 2;
-	 $mail->Debugoutput = 'html';
+	// $mail->SMTPDebug = 2;
+	// $mail->Debugoutput = 'html';
 	$mail->Host="smtp.gmail.com";
 	$mail->Port=587;
 	$mail->SMTPSecure="tls";

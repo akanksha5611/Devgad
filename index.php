@@ -3,7 +3,7 @@
 
 <?php 
 session_start();
-$mysqli = new mysqli("localhost","root","root","devgad");
+$mysqli = new mysqli("localhost","root","","devgad");
 
 require 'connection.php';
 // require 'signup.php';
@@ -64,7 +64,7 @@ echo $res;
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                         
                         
                        <li class="dropdown">
@@ -139,7 +139,7 @@ echo $res;
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> Devgad Alphanso </strong></h1>
                             <p class="m-b-40">Devgad Ratnagiri alphonso mangoes to your Doors.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="#.products-box">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ echo $res;
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> Devgad Alphanso </strong></h1>
                             <p class="m-b-40">Devgad Ratnagiri alphonso mangoes to your Doors</p>
-                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="#products-box">Shop Now</a></p>
                         </div>
                     </div>
                 </div>

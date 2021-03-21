@@ -37,7 +37,14 @@ $conn = Connect();
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   
-
+    <!-- <meta charset="utf-8">
+      <meta name="robots" content="noindex, nofollow">
+      <title>Contact Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	  <link href="style.css" rel="stylesheet"> -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -59,8 +66,8 @@ $conn = Connect();
                       <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="about.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="about.php">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                             
                             
                            <li class="dropdown">
@@ -232,7 +239,7 @@ $conn = Connect();
                             <h2>GET IN TOUCH</h2>
                             <p>Seeing is believing and hearing is assuring. Feel free to write to us for any queries or to tell us how you love Hafoos mangoes.
                                     If you feel we could do something better and improve our services, write to us and we promise you will hear from us shortly.</p>
-                            <form id="contactForm">
+                            <!-- <form id="contactForm">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -264,10 +271,68 @@ $conn = Connect();
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12">
+                    <div class="col-md-9">
+               <form method="post" id="frmContactus">
+					<div class="contact-form">
+					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="name">Name:</label>
+						 <div class="col-sm-10">          
+							<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+						 </div>
+					  </div>
+					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="email">Email:</label>
+						 <div class="col-sm-10">
+							<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+						 </div>
+					  </div>
+					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+						 <div class="col-sm-10">
+							<input type="text" class="form-control" id="mobile" placeholder="Enter mobile" name="mobile" required>
+						 </div>
+					  </div>
+					  
+					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="comment">Comment:</label>
+						 <div class="col-sm-10">
+							<textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+						 </div>
+					  </div>
+					  <div class="submit-button text-center">
+						 <div >
+							<button class="btn hvr-hover"id="submit" type="submit" name="submit">Submit</button>
+							<span style="color:red;" id="msg"></span>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                    </div>
+					  </div>
+				   </div>
+			   </form>
+            </div>
+            <script>
+                            jQuery('#frmContactus').on('submit',function(e){
+                            jQuery('#msg').html('');
+                            jQuery('#submit').html('Please wait');
+                            jQuery('#submit').attr('disabled',true);
+                            jQuery.ajax({
+                                url:'submit.php',
+                                type:'post',
+                                data:jQuery('#frmContactus').serialize(),
+                                success:function(result){
+                                    jQuery('#msg').html(result);
+                                    jQuery('#submit').html('Submit');
+                                    jQuery('#submit').attr('disabled',false);
+                                    jQuery('#frmContactus')[0].reset();
+                                }
+                            });
+                            e.preventDefault();
+                        });
+            </script>
+                    <!-- <div class="col-lg-4 col-sm-12">
                         <div class="contact-info-left">
                             <h2>CONTACT INFO</h2>
                             <p>Authentic, Original & 100% Natural Ratnagiri and Devgad Alphonso Mangoes Online. Delivered to your doorsteps PAN India Shipping available. </p>
@@ -286,12 +351,11 @@ $conn = Connect();
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <!-- End Cart -->
-    
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
