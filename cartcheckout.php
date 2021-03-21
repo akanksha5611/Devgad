@@ -36,13 +36,13 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                         
                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
@@ -103,9 +103,13 @@
             
             </select>
           </div>
-          <div class="form-group">
+          <div class="submit-button text-center">
             <input type='submit' name="submit" value="Place Order" class="btn btn-danger btn-block">
+            <span style="color:red;" id="msg"></span>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
           </div>
+
         </form>
       </div>
     </div>
@@ -115,19 +119,19 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
 
   <script>
-                            jQuery('#frmContactus').on('submit',function(e){
+                            jQuery('#placeOrder').submit(function(e){
                             jQuery('#msg').html('');
                             jQuery('#submit').html('Please wait');
                             jQuery('#submit').attr('disabled',true);
                             jQuery.ajax({
-                                url:'placeorder.php',
-                                type:'post',
-                                data:jQuery('#frmContactus').serialize(),
+                                url:'action.php',
+                                method:'post',
+                                data:jQuery('#placeOrder').serialize(),
                                 success:function(result){
                                     jQuery('#msg').html(result);
                                     jQuery('#submit').html('Submit');
                                     jQuery('#submit').attr('disabled',false);
-                                    jQuery('#frmContactus')[0].reset();
+                                    jQuery('#placeOrder')[0].reset();
                                 }
                             });
                             e.preventDefault();

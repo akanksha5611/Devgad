@@ -43,11 +43,23 @@
 					  </div>
 					  
 					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="address">Mobile:</label>
+						 <div class="col-sm-10">
+							<input type="text" class="form-control" id="address" placeholder="Enter mobile" name="address" required>
+						 </div>
+					  </div>
+					  <div class="form-group">
+						 <label class="control-label col-sm-2" for="product">product:</label>
+						 <div class="col-sm-10">
+							<input type="text" class="form-control" id="product" placeholder="Enter mobile" name="product" required>
+						 </div>
+					  </div>
+					  <!-- <div class="form-group">
 						 <label class="control-label col-sm-2" for="comment">Comment:</label>
 						 <div class="col-sm-10">
 							<textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
 						 </div>
-					  </div>
+					  </div> -->
 					  <div class="form-group">
 						 <div class="col-sm-offset-2 col-sm-10">
 							<button type="submit" class="btn btn-default" name="submit" id="submit">Submit</button>
@@ -65,7 +77,7 @@
 		jQuery('#submit').html('Please wait');
 		jQuery('#submit').attr('disabled',true);
 		jQuery.ajax({
-			url:'submit.php',
+			url:'placeorder.php',
 			type:'post',
 			data:jQuery('#frmContactus').serialize(),
 			success:function(result){

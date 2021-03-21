@@ -111,5 +111,37 @@
 								<h4>Payment Mode : ' . $pmode . '</h4>
 						  </div>';
 	  echo $data;
+	  $msg="Thanks message";
+	
+	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$phone</td></tr><tr><td>Address</td><td>$address</td></tr><tr><td>Product</td><td>$products</td></tr></table>";
+
+
+	include('smtp/PHPMailerAutoload.php');
+	$mail=new PHPMailer(true);
+	$mail->isSMTP();
+	// $mail->SMTPDebug = 2;
+	// $mail->Debugoutput = 'html';
+	$mail->Host="smtp.gmail.com";
+	$mail->Port=587;
+	$mail->SMTPSecure="tls";
+	$mail->SMTPAuth=true;
+	$mail->Username="suyashshelake50@gmail.com";//GAMIL_EMAIL_ID
+	$mail->Password="liger090";//GAMIL_PASSWORD
+	$mail->SetFrom("suyashshelake50@gmail.com");//GAMIL_EMAIL_ID
+	$mail->addAddress("suyashshelake50@gmail.com");//TO_EMAIL_ID
+	$mail->IsHTML(true);
+	$mail->Subject="New Order";
+	$mail->Body=$html;
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+
+	if($mail->send()){
+		echo "Mail send";
+	}else{
+		echo "Error occur";
+	}
 	}
 ?>
