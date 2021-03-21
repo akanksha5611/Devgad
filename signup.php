@@ -2,7 +2,7 @@
 session_start(); 
 
 $valid = "SELECT * FROM user WHERE username = '".$_POST["InputEmail1"]."';";
-$mysqli = new mysqli("localhost","root","root","devgad");
+$mysqli = new mysqli("localhost","root","","devgad");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
