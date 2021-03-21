@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-
+<?php 
+session_start();
+require 'connection.php';
+$conn = Connect();
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,73 +44,73 @@
 
     <!-- Start Main Top -->
     <header class="main-header">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
-            <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
-                </div>
-                <!-- End Header Navigation -->
-
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        
-                        
-                       <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-
-                            <ul class="dropdown-menu">
-                            <?php 
-                                if(isset($_SESSION['user']))
-                            {
-                            ?>
-                                <li><a href="cart.php">MyCart</a></li>
-                                <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
-                                <!-- <ul class="navbar-nav ml-auto"> -->
-                                    <!-- <li class="nav-item">
-                                    </li>
-                                    <li class="nav-item">
-                                    </li>
-                                    <li class="nav-item">
-                                    </li> -->
-                                    <li class="nav-item">
-                                    <a class="nav-link" href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
-                                    </li>
-                         
-                                <?php 
-                                    }
-                                    ?>
-								<!-- <li><a href="shop-detail.html">FreshShop</a></li> -->
+             <!-- Start Navigation -->
+             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+                <div class="container">
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                        <a class="navbar-brand" href="index.php"><img src="images/png 100.png" class="logo" height= "80px" alt=""></a>
+                    </div>
+                    <!-- End Header Navigation -->
+    
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="gallery.php">Gallery</a></li>
                             
-                                <!-- <li><a href="shop.php">Shop</a></li>  -->
-                                <li><a href="checkout.php">Checkout</a></li>
-                            </ul>
-                        </li>
-                      
-                     <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
-                    </ul>
-                    <li><a href="#">
-                    <?php
-                    if
-                    (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
-                    } else 
-                      echo  '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
-                    
-                    ?></a></li>
- 
-                </div>
-         </div>
-            
-        </nav>
-        <!-- End Navigation -->
+                            
+                           <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+    
+                                <ul class="dropdown-menu">
+                                <?php 
+                                    if(isset($_SESSION['user']))
+                                {
+                                ?>
+                                    <li><a href="cart.php">MyCart</a></li>
+                                    <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
+                                    <!-- <ul class="navbar-nav ml-auto"> -->
+                                        <!-- <li class="nav-item">
+                                        </li>
+                                        <li class="nav-item">
+                                        </li>
+                                        <li class="nav-item">
+                                        </li> -->
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="cart.php"><i class="fas fa-shopping-cart"></i> <span id="cart-item" class="badge badge-danger"></span></a>
+                                        </li>
+                             
+                                    <?php 
+                                        }
+                                        ?>
+                                    <!-- <li><a href="shop-detail.html">FreshShop</a></li> -->
+                                
+                                    <!-- <li><a href="shop.php">Shop</a></li>  -->
+                                    <li><a href="checkout.php">Checkout</a></li>
+                                </ul>
+                            </li>
+                          
+                         <!--   <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li> -->
+                        </ul>
+                        <li><a href="#">
+                        <?php
+                        if
+                        (isset($_SESSION['user'])){echo " Hello  " .$_SESSION['user']; echo  '<a href="logout.php"><span class="glyphicon glyphicon-log-out">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp LOGOUT </span></a>';
+                        } else 
+                          echo  '<li class="nav-item"><a class="nav-link" href="checkout.php">LOGIN</a></li>'
+                        
+                        ?></a></li>
+     
+                    </div>
+             </div>
+                
+            </nav>
+            <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
 

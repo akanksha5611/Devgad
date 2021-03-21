@@ -1,22 +1,22 @@
 <?php
 include('database.inc.php');
 $msg="";
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['comment'])){
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['address']) && isset($_POST['product'])){
 	$name=mysqli_real_escape_string($con,$_POST['name']);
 	$email=mysqli_real_escape_string($con,$_POST['email']);
 	$mobile=mysqli_real_escape_string($con,$_POST['mobile']);
-	$comment=mysqli_real_escape_string($con,$_POST['comment']);
-	
-	mysqli_query($con,"insert into contact_us(name,email,mobile,comment) values('$name','$email','$mobile','$comment')");
+	$address=mysqli_real_escape_string($con,$_POST['address']);
+	$product=mysqli_real_escape_string($con,$_POST['product']);
+	mysqli_query($con,"insert into contact_us(name,email,mobile,comment) values('$name','$email','$mobile','$address',$product')");
 	$msg="Thanks message";
 	
-	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Comment</td><td>$comment</td></tr></table>";
+	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Address</td><td>$address</td></tr><tr><td>Product</td><td>$product</td></tr></table>";
 	
 	include('smtp/PHPMailerAutoload.php');
 	$mail=new PHPMailer(true);
 	$mail->isSMTP();
-	 $mail->SMTPDebug = 2;
-	 $mail->Debugoutput = 'html';
+	// $mail->SMTPDebug = 2;
+	// $mail->Debugoutput = 'html';
 	$mail->Host="smtp.gmail.com";
 	$mail->Port=587;
 	$mail->SMTPSecure="tls";
