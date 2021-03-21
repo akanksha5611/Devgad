@@ -157,7 +157,7 @@
               <?php endwhile; ?>
               <tr>
                 <td colspan="3">
-                  <a href="form.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue
+                  <a href="index.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue
                     Shopping</a>
                 </td>
                 <td colspan="2"><b>Grand Total</b></td>

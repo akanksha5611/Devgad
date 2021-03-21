@@ -11,7 +11,8 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 	$msg="Thanks message";
 	
 	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Address</td><td>$address</td></tr><tr><td>Product</td><td>$product</td></tr></table>";
-	
+	echo 'Done'
+
 	include('smtp/PHPMailerAutoload.php');
 	$mail=new PHPMailer(true);
 	$mail->isSMTP();
@@ -33,6 +34,9 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 		'verify_peer_name'=>false,
 		'allow_self_signed'=>false
 	));
+
+	echo 'Done'
+
 	if($mail->send()){
 		echo "Mail send";
 	}else{

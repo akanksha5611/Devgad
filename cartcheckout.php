@@ -104,7 +104,7 @@
             </select>
           </div>
           <div class="form-group">
-            <input type="submit" name="submit" value="Place Order" class="btn btn-danger btn-block">
+            <input type='submit' name="submit" value="Place Order" class="btn btn-danger btn-block">
           </div>
         </form>
       </div>
