@@ -7,7 +7,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &&
 	$mobile=mysqli_real_escape_string($con,$_POST['mobile']);
 	$comment=mysqli_real_escape_string($con,$_POST['comment']);
 	
-	mysqli_query($con,"insert into contact_us(name,email,mobile,comment) values('$name','$email','$mobile','$comment')");
+	mysqli_query($con,"INSERT INTO contact_us(name,email,mobile,comment) values('$name','$email','$mobile','$comment')");
 	$msg="Thanks message";
 	
 	$html="<table><tr><td>Name</td><td>$name</td></tr><tr><td>Email</td><td>$email</td></tr><tr><td>Mobile</td><td>$mobile</td></tr><tr><td>Comment</td><td>$comment</td></tr></table>";

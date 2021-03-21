@@ -4,7 +4,7 @@ function Connect()
 {
 	$dbhost = "localhost";
 	$dbuser = "root";
-	$dbpass = "";
+	$dbpass = "root";
 	$dbname = "devgad";
 
 	//Create Connection

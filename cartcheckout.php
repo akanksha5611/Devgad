@@ -100,12 +100,11 @@
             <select name="pmode" class="form-control">
               <option value="" selected disabled>-Select Payment Mode-</option>
               <option value="cod">Cash On Delivery</option>
-              <option value="netbanking">Net Banking</option>
-              <option value="cards">Debit/Credit Card</option>
+            
             </select>
           </div>
           <div class="form-group">
-            <input type="submit" name="submit" value="Place Order" class="btn btn-danger btn-block">
+            <input type='submit' name="submit" value="Place Order" class="btn btn-danger btn-block">
           </div>
         </form>
       </div>
@@ -114,6 +113,26 @@
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+
+  <script>
+                            jQuery('#frmContactus').on('submit',function(e){
+                            jQuery('#msg').html('');
+                            jQuery('#submit').html('Please wait');
+                            jQuery('#submit').attr('disabled',true);
+                            jQuery.ajax({
+                                url:'placeorder.php',
+                                type:'post',
+                                data:jQuery('#frmContactus').serialize(),
+                                success:function(result){
+                                    jQuery('#msg').html(result);
+                                    jQuery('#submit').html('Submit');
+                                    jQuery('#submit').attr('disabled',false);
+                                    jQuery('#frmContactus')[0].reset();
+                                }
+                            });
+                            e.preventDefault();
+                        });
+            </script>
 
   <script type="text/javascript">
   $(document).ready(function() {
@@ -148,25 +167,7 @@
     }
   });
   </script>
-              <script>
-                            jQuery('#frmContactus').on('submit',function(e){
-                            jQuery('#msg').html('');
-                            jQuery('#submit').html('Please wait');
-                            jQuery('#submit').attr('disabled',true);
-                            jQuery.ajax({
-                                url:'placeorder.php',
-                                type:'post',
-                                data:jQuery('#frmContactus').serialize(),
-                                success:function(result){
-                                    jQuery('#msg').html(result);
-                                    jQuery('#submit').html('Submit');
-                                    jQuery('#submit').attr('disabled',false);
-                                    jQuery('#frmContactus')[0].reset();
-                                }
-                            });
-                            e.preventDefault();
-                        });
-            </script>
+              
 </body>
 
 </html>
